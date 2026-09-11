@@ -137,5 +137,10 @@ namespace PEMINJAMANALATSEKOLA
         {
 
         }
+
+        private void guna2Shapes2_Click(object sender, EventArgs e)
+        {
+            //123
+        }
     }
 }

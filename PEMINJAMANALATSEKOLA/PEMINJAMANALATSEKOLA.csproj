@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4D48E1F-9BAC-4ADC-AD8A-9164C17E2791}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PEMINJAMANALATSEKOLA</RootNamespace>
+    <AssemblyName>PEMINJAMANALATSEKOLA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.8, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.8\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDashboard.Designer.cs">
+      <DependentUpon>FDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDataAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDataAlat.Designer.cs">
+      <DependentUpon>FDataAlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fpeminjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpeminjaman.Designer.cs">
+      <DependentUpon>Fpeminjaman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flogin.Designer.cs">
+      <DependentUpon>Flogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FKategoriAlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FKategoriAlat.Designer.cs">
+      <DependentUpon>FKategoriAlat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fpengembalian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpengembalian.Designer.cs">
+      <DependentUpon>Fpengembalian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fpersetujuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fpersetujuan.Designer.cs">
+      <DependentUpon>Fpersetujuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRole.Designer.cs">
+      <DependentUpon>FRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FUser.Designer.cs">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KF.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="FMenuUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMenuUtama.Designer.cs">
+      <DependentUpon>FMenuUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usersession.cs" />
+    <EmbeddedResource Include="FDataAlat.resx">
+      <DependentUpon>FDataAlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpeminjaman.resx">
+      <DependentUpon>Fpeminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FKategoriAlat.resx">
+      <DependentUpon>FKategoriAlat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flogin.resx">
+      <DependentUpon>Flogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMenuUtama.resx">
+      <DependentUpon>FMenuUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDashboard.resx">
+      <DependentUpon>FDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fpengembalian.resx">
+      <DependentUpon>Fpengembalian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRole.resx">
+      <DependentUpon>FRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUser.resx">
+      <DependentUpon>FUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

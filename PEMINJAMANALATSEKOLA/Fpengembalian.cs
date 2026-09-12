@@ -187,8 +187,7 @@ namespace PEMINJAMANALATSEKOLA
             int Baris = e.RowIndex;
             int Kolom = e.ColumnIndex;
             if (Baris < 0) return;
-
-            // --- EDIT ---
+            
             if (Kolom == 8) // sesuaikan index kolom tombol Edit di grid kamu
             {
                 string idPengembalian = guna2DataGridView1.Rows[Baris].Cells[0].Value.ToString();

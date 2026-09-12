@@ -419,7 +419,7 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Button1.FillColor = System.Drawing.Color.Green;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(71, 695);
+            this.guna2Button1.Location = new System.Drawing.Point(624, 374);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(246, 57);
             this.guna2Button1.TabIndex = 43;
@@ -437,7 +437,7 @@ namespace PEMINJAMANALATSEKOLA
             this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_update.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Location = new System.Drawing.Point(351, 695);
+            this.btn_update.Location = new System.Drawing.Point(624, 452);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(246, 57);
             this.btn_update.TabIndex = 44;

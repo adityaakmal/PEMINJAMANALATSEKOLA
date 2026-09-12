@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2026 at 03:14 PM
+-- Generation Time: Sep 12, 2026 at 02:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,7 +40,11 @@ CREATE TABLE `alat` (
 --
 
 INSERT INTO `alat` (`kode_alat`, `nama_alat`, `id_kategori`, `jumlah`, `kondisi`) VALUES
-('1', 'laptop', 2, 12, 'baik');
+('1', 'laptop', 2, 12, 'baik'),
+('2', 'bola basket', 1, 23, 'baik'),
+('3', 'bola futsal', 1, 56, 'baik'),
+('4', 'Stop Kontak', 2, 3, 'baik'),
+('5', 'keyboard', 2, 10, 'baik');
 
 -- --------------------------------------------------------
 
@@ -60,7 +64,7 @@ CREATE TABLE `kategori` (
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `keterangan`) VALUES
 (1, 'Peralatan Olahraga', 'Untuk eskul'),
-(2, 'Peralatan Praktik', 'Untuk ngoding');
+(2, 'Peralatan Praktik', 'Untuk praktik');
 
 -- --------------------------------------------------------
 
@@ -104,8 +108,9 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`kode_peminjaman`, `id_user`, `kode_alat`, `jumlah`, `tgl_pinjam`, `tgl_kembali_rencana`, `keterangan`, `status`) VALUES
-('PJM001', 1, '1', 1, '2026-09-01', '2026-09-08', 'Belajar Dekstop C#', 'Menunggu'),
-('PJM002', 2, '1', 1, '2026-08-22', '2026-08-29', 'Belajar Web', 'Menunggu');
+('PJM001', 1, '1', 1, '2026-09-01', '2026-09-08', 'Belajar Dekstop C#', 'Diproses'),
+('PJM002', 2, '1', 1, '2026-08-22', '2026-08-29', 'Belajar Web', 'Selesai'),
+('PJM003', 7, '1', 12, '2026-08-22', '2026-08-29', 'ngejoki', 'Menunggu');
 
 -- --------------------------------------------------------
 
@@ -121,6 +126,14 @@ CREATE TABLE `pengembalian` (
   `id_penerima` int(11) DEFAULT NULL,
   `catatan_pengembalian` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pengembalian`
+--
+
+INSERT INTO `pengembalian` (`id_pengembalian`, `kode_peminjaman`, `tgl_kembali_aktual`, `kondisi_alat`, `id_penerima`, `catatan_pengembalian`) VALUES
+(1, 'PJM001', '2026-09-26', 'Rusak', 7, 'denda!'),
+(4, 'PJM002', '2026-08-22', 'Baik', 8, 'Terimakasih');
 
 -- --------------------------------------------------------
 
@@ -171,7 +184,8 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id_role`, `nama_role`) VALUES
 (1, 'admin'),
 (2, 'user'),
-(3, 'tu');
+(3, 'tu'),
+(4, 'Tata Usaha');
 
 -- --------------------------------------------------------
 
@@ -193,7 +207,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id_user`, `nama`, `username`, `password`, `id_role`) VALUES
 (1, 'aditya', 'admin', 'admin123', 1),
-(2, 'kamale', 'user', 'user123', 2);
+(2, 'kamale', 'user', 'user123', 2),
+(7, 'ghaisan', 'ghaisan', 'user12', 3),
+(8, 'agus', 'agus', 'agus123', 3);
 
 -- --------------------------------------------------------
 
@@ -281,7 +297,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `pengembalian`
 --
 ALTER TABLE `pengembalian`
-  MODIFY `id_pengembalian` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pengembalian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `persetujuan`
@@ -299,13 +315,13 @@ ALTER TABLE `riwayat`
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_role` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
@@ -349,7 +365,7 @@ ALTER TABLE `riwayat`
 -- Constraints for table `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `fk_users_role` FOREIGN KEY (`id_role`) REFERENCES `roles` (`id_role`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_users_role` FOREIGN KEY (`id_role`) REFERENCES `roles` (`id_role`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -15,6 +15,9 @@ namespace PEMINJAMANALATSEKOLA
         public Fpengembalian()
         {
             InitializeComponent();
+            // cmbkodepeminjam.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //cmbkodepeminjam.AutoCompleteSource = AutoCompleteSource.ListItems;
+
         }
 
 
@@ -136,11 +139,16 @@ namespace PEMINJAMANALATSEKOLA
 
         private void cmbkodepeminjam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbkodepeminjam.SelectedIndex == -1) return;
+            if (cmbkodepeminjam.SelectedIndex == -1)
+            {
+                lblNamaPeminjam.Text = "-";
+                lblNamaAlat.Text = "-";
+                return;
+            }
 
             string kode = cmbkodepeminjam.SelectedValue.ToString();
 
-            DB.crud($"SELECT u.nama AS nama_peminjam, a.nama_alat, p.jumlah " +
+            DB.crud($"SELECT u.nama AS nama_peminjam, a.nama_alat " +
                     $"FROM peminjaman p " +
                     $"LEFT JOIN users u ON p.id_user = u.id_user " +
                     $"LEFT JOIN alat a ON p.kode_alat = a.kode_alat " +
@@ -150,7 +158,7 @@ namespace PEMINJAMANALATSEKOLA
             {
                 DataRow row = DB.ds.Tables[0].Rows[0];
                 lblNamaPeminjam.Text = row["nama_peminjam"].ToString();
-                lblNamaAlat.Text = row["nama_alat"].ToString();
+                lblNamaAlat.Text     = row["nama_alat"].ToString();
             }
         }
 
@@ -188,7 +196,7 @@ namespace PEMINJAMANALATSEKOLA
             int Kolom = e.ColumnIndex;
             if (Baris < 0) return;
             
-            if (Kolom == 8) // sesuaikan index kolom tombol Edit di grid kamu
+            if (Kolom == 8) 
             {
                 string idPengembalian = guna2DataGridView1.Rows[Baris].Cells[0].Value.ToString();
 

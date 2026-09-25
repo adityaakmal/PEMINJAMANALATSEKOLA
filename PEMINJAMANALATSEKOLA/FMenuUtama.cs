@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,18 +30,21 @@ namespace PEMINJAMANALATSEKOLA
         {
            // lblUserAktif.Text = "Login sebagai: " + namaUser + " (" + roleUser + ")";
             AturHakAkses();
+            // Load dashboard by default
+            FDashboard hal1 = new FDashboard() { TopLevel = false, TopMost = true };
+            KF.untukformadit(hal1, PNLKONTEN);
         }
 
         private void AturHakAkses()
         {
             if (roleUser.Trim().ToLower() == "petugas")
             {
-                SembunyikanMenu("btnDataMaster");   // <- GANTI dengan nama asli parent "Data Master"
+                SembunyikanMenu("btnDataMaster");
                 SembunyikanMenu("btnUser");
                 SembunyikanMenu("btnRole");
                 SembunyikanMenu("btnKategoriAlat");
                 SembunyikanMenu("btnDataAlat");
-                SembunyikanMenu("btnDataPeminjam");
+                SembunyikanMenu("menuDataPeminjam");   // Fixed: was "btnDataPeminjam" (non-existent)
             }
         }
 
@@ -149,6 +152,16 @@ namespace PEMINJAMANALATSEKOLA
         {
             Fpersetujuan hal2 = new Fpersetujuan() { TopLevel = false, TopMost = true };
             KF.untukformadit(hal2, PNLKONTEN);
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -139,6 +139,9 @@
     <EmbeddedResource Include="Fpengembalian.resx">
       <DependentUpon>Fpengembalian.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Fpersetujuan.resx">
+      <DependentUpon>Fpersetujuan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRole.resx">
       <DependentUpon>FRole.cs</DependentUpon>
     </EmbeddedResource>

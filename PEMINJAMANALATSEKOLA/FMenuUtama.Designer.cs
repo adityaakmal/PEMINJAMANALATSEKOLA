@@ -37,7 +37,6 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PNLSIDE = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDataMaster = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +56,6 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.PNLSIDE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnldpdown.SuspendLayout();
             this.pnldropdown2.SuspendLayout();
@@ -101,7 +99,7 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Panel5.BorderRadius = 40;
             this.guna2Panel5.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.guna2Panel5.FillColor = System.Drawing.Color.Black;
             this.guna2Panel5.Location = new System.Drawing.Point(340, 0);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel5.Name = "guna2Panel5";
@@ -128,10 +126,9 @@ namespace PEMINJAMANALATSEKOLA
             this.PNLSIDE.BorderRadius = 40;
             this.PNLSIDE.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
             this.PNLSIDE.Controls.Add(this.guna2Button2);
-            this.PNLSIDE.Controls.Add(this.guna2PictureBox2);
             this.PNLSIDE.Controls.Add(this.flowLayoutPanel1);
             this.PNLSIDE.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PNLSIDE.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.PNLSIDE.FillColor = System.Drawing.Color.Black;
             this.PNLSIDE.Location = new System.Drawing.Point(0, 0);
             this.PNLSIDE.Margin = new System.Windows.Forms.Padding(4);
             this.PNLSIDE.Name = "PNLSIDE";
@@ -152,27 +149,14 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Black", 13.8F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.Red;
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.Location = new System.Drawing.Point(23, 965);
+            this.guna2Button2.Location = new System.Drawing.Point(23, 993);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(282, 47);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Logout";
+            this.guna2Button2.Text = " Logout";
             this.guna2Button2.UseTransparentBackground = true;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(23, 29);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(254, 146);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 1;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
             // 
             // flowLayoutPanel1
             // 
@@ -197,7 +181,7 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
@@ -219,7 +203,7 @@ namespace PEMINJAMANALATSEKOLA
             this.btnDataMaster.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDataMaster.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDataMaster.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDataMaster.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.btnDataMaster.FillColor = System.Drawing.Color.Transparent;
             this.btnDataMaster.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.btnDataMaster.ForeColor = System.Drawing.Color.White;
             this.btnDataMaster.Image = ((System.Drawing.Image)(resources.GetObject("btnDataMaster.Image")));
@@ -239,7 +223,7 @@ namespace PEMINJAMANALATSEKOLA
             this.pnldpdown.Controls.Add(this.btnKategoriAlat);
             this.pnldpdown.Controls.Add(this.btnUser);
             this.pnldpdown.Controls.Add(this.btnRole);
-            this.pnldpdown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.pnldpdown.FillColor = System.Drawing.Color.Transparent;
             this.pnldpdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
             this.pnldpdown.Location = new System.Drawing.Point(3, 119);
             this.pnldpdown.Name = "pnldpdown";
@@ -257,14 +241,14 @@ namespace PEMINJAMANALATSEKOLA
             this.btnDataAlat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDataAlat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDataAlat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDataAlat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.btnDataAlat.FillColor = System.Drawing.Color.Transparent;
             this.btnDataAlat.Font = new System.Drawing.Font("Segoe UI Black", 11.2F, System.Drawing.FontStyle.Bold);
             this.btnDataAlat.ForeColor = System.Drawing.Color.White;
             this.btnDataAlat.Image = ((System.Drawing.Image)(resources.GetObject("btnDataAlat.Image")));
             this.btnDataAlat.Location = new System.Drawing.Point(4, 169);
             this.btnDataAlat.Margin = new System.Windows.Forms.Padding(4);
             this.btnDataAlat.Name = "btnDataAlat";
-            this.btnDataAlat.Size = new System.Drawing.Size(254, 47);
+            this.btnDataAlat.Size = new System.Drawing.Size(315, 47);
             this.btnDataAlat.TabIndex = 5;
             this.btnDataAlat.Text = "Data Alat";
             this.btnDataAlat.UseTransparentBackground = true;
@@ -280,16 +264,16 @@ namespace PEMINJAMANALATSEKOLA
             this.btnKategoriAlat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKategoriAlat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnKategoriAlat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKategoriAlat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.btnKategoriAlat.FillColor = System.Drawing.Color.Transparent;
             this.btnKategoriAlat.Font = new System.Drawing.Font("Segoe UI Black", 11.2F, System.Drawing.FontStyle.Bold);
             this.btnKategoriAlat.ForeColor = System.Drawing.Color.White;
             this.btnKategoriAlat.Image = ((System.Drawing.Image)(resources.GetObject("btnKategoriAlat.Image")));
             this.btnKategoriAlat.Location = new System.Drawing.Point(17, 114);
             this.btnKategoriAlat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKategoriAlat.Name = "btnKategoriAlat";
-            this.btnKategoriAlat.Size = new System.Drawing.Size(264, 47);
+            this.btnKategoriAlat.Size = new System.Drawing.Size(309, 47);
             this.btnKategoriAlat.TabIndex = 4;
-            this.btnKategoriAlat.Text = "Kategori Alat\n";
+            this.btnKategoriAlat.Text = "Data Kategori Alat\n";
             this.btnKategoriAlat.UseTransparentBackground = true;
             this.btnKategoriAlat.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
@@ -302,16 +286,16 @@ namespace PEMINJAMANALATSEKOLA
             this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.btnUser.FillColor = System.Drawing.Color.Transparent;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI Black", 11.2F, System.Drawing.FontStyle.Bold);
             this.btnUser.ForeColor = System.Drawing.Color.White;
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
-            this.btnUser.Location = new System.Drawing.Point(40, 4);
+            this.btnUser.Location = new System.Drawing.Point(17, 4);
             this.btnUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(128, 47);
+            this.btnUser.Size = new System.Drawing.Size(313, 47);
             this.btnUser.TabIndex = 2;
-            this.btnUser.Text = "User";
+            this.btnUser.Text = "Data User";
             this.btnUser.UseTransparentBackground = true;
             this.btnUser.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
@@ -325,16 +309,16 @@ namespace PEMINJAMANALATSEKOLA
             this.btnRole.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRole.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRole.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.btnRole.FillColor = System.Drawing.Color.Transparent;
             this.btnRole.Font = new System.Drawing.Font("Segoe UI Black", 11.2F, System.Drawing.FontStyle.Bold);
             this.btnRole.ForeColor = System.Drawing.Color.White;
             this.btnRole.Image = ((System.Drawing.Image)(resources.GetObject("btnRole.Image")));
-            this.btnRole.Location = new System.Drawing.Point(30, 59);
+            this.btnRole.Location = new System.Drawing.Point(1, 59);
             this.btnRole.Margin = new System.Windows.Forms.Padding(4);
             this.btnRole.Name = "btnRole";
-            this.btnRole.Size = new System.Drawing.Size(151, 47);
+            this.btnRole.Size = new System.Drawing.Size(329, 47);
             this.btnRole.TabIndex = 3;
-            this.btnRole.Text = "Role";
+            this.btnRole.Text = "Data Role";
             this.btnRole.UseTransparentBackground = true;
             this.btnRole.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
@@ -347,16 +331,16 @@ namespace PEMINJAMANALATSEKOLA
             this.btnTransakasi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTransakasi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnTransakasi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTransakasi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.btnTransakasi.FillColor = System.Drawing.Color.Transparent;
             this.btnTransakasi.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.btnTransakasi.ForeColor = System.Drawing.Color.White;
             this.btnTransakasi.Image = ((System.Drawing.Image)(resources.GetObject("btnTransakasi.Image")));
             this.btnTransakasi.Location = new System.Drawing.Point(4, 355);
             this.btnTransakasi.Margin = new System.Windows.Forms.Padding(4);
             this.btnTransakasi.Name = "btnTransakasi";
-            this.btnTransakasi.Size = new System.Drawing.Size(280, 50);
+            this.btnTransakasi.Size = new System.Drawing.Size(318, 50);
             this.btnTransakasi.TabIndex = 6;
-            this.btnTransakasi.Text = "Transaksi";
+            this.btnTransakasi.Text = "Data Transaksi";
             this.btnTransakasi.UseTransparentBackground = true;
             this.btnTransakasi.Click += new System.EventHandler(this.btnTransakasi_Click);
             // 
@@ -366,7 +350,7 @@ namespace PEMINJAMANALATSEKOLA
             this.pnldropdown2.Controls.Add(this.menuDataPeminjam);
             this.pnldropdown2.Controls.Add(this.guna2Button6);
             this.pnldropdown2.Controls.Add(this.guna2Button8);
-            this.pnldropdown2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.pnldropdown2.FillColor = System.Drawing.Color.Transparent;
             this.pnldropdown2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
             this.pnldropdown2.Location = new System.Drawing.Point(3, 412);
             this.pnldropdown2.Name = "pnldropdown2";
@@ -384,14 +368,14 @@ namespace PEMINJAMANALATSEKOLA
             this.menuDataPeminjam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.menuDataPeminjam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.menuDataPeminjam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.menuDataPeminjam.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.menuDataPeminjam.FillColor = System.Drawing.Color.Transparent;
             this.menuDataPeminjam.Font = new System.Drawing.Font("Segoe UI Black", 11.2F, System.Drawing.FontStyle.Bold);
             this.menuDataPeminjam.ForeColor = System.Drawing.Color.White;
             this.menuDataPeminjam.Image = ((System.Drawing.Image)(resources.GetObject("menuDataPeminjam.Image")));
             this.menuDataPeminjam.Location = new System.Drawing.Point(17, 4);
             this.menuDataPeminjam.Margin = new System.Windows.Forms.Padding(4);
             this.menuDataPeminjam.Name = "menuDataPeminjam";
-            this.menuDataPeminjam.Size = new System.Drawing.Size(282, 47);
+            this.menuDataPeminjam.Size = new System.Drawing.Size(309, 47);
             this.menuDataPeminjam.TabIndex = 6;
             this.menuDataPeminjam.Text = "Peminjaman";
             this.menuDataPeminjam.UseTransparentBackground = true;
@@ -407,14 +391,14 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.guna2Button6.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI Black", 11.2F, System.Drawing.FontStyle.Bold);
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.Location = new System.Drawing.Point(-6, 114);
             this.guna2Button6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(325, 47);
+            this.guna2Button6.Size = new System.Drawing.Size(336, 47);
             this.guna2Button6.TabIndex = 4;
             this.guna2Button6.Text = "Persetujuan";
             this.guna2Button6.UseTransparentBackground = true;
@@ -430,14 +414,14 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.guna2Button8.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button8.Font = new System.Drawing.Font("Segoe UI Black", 11.2F, System.Drawing.FontStyle.Bold);
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
             this.guna2Button8.Location = new System.Drawing.Point(17, 59);
             this.guna2Button8.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(302, 47);
+            this.guna2Button8.Size = new System.Drawing.Size(309, 47);
             this.guna2Button8.TabIndex = 3;
             this.guna2Button8.Text = "Pengembalian";
             this.guna2Button8.UseTransparentBackground = true;
@@ -452,16 +436,16 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.Location = new System.Drawing.Point(4, 587);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(257, 50);
+            this.guna2Button3.Size = new System.Drawing.Size(318, 50);
             this.guna2Button3.TabIndex = 8;
-            this.guna2Button3.Text = "Riwayat ";
+            this.guna2Button3.Text = "Data Riwayat";
             this.guna2Button3.UseTransparentBackground = true;
             // 
             // guna2Button4
@@ -473,14 +457,14 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Black", 14.2F, System.Drawing.FontStyle.Bold);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.Location = new System.Drawing.Point(4, 645);
             this.guna2Button4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(257, 50);
+            this.guna2Button4.Size = new System.Drawing.Size(318, 50);
             this.guna2Button4.TabIndex = 9;
             this.guna2Button4.Text = "Laporan";
             this.guna2Button4.UseTransparentBackground = true;
@@ -500,7 +484,6 @@ namespace PEMINJAMANALATSEKOLA
             this.guna2Panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.PNLSIDE.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.pnldpdown.ResumeLayout(false);
             this.pnldropdown2.ResumeLayout(false);
@@ -522,7 +505,6 @@ namespace PEMINJAMANALATSEKOLA
         private Guna.UI2.WinForms.Guna2Button btnRole;
         private Guna.UI2.WinForms.Guna2Panel pnldpdown;
         private Guna.UI2.WinForms.Guna2Button btnDataMaster;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2Button menuDataPeminjam;
         private Guna.UI2.WinForms.Guna2Button btnDataAlat;
         private Guna.UI2.WinForms.Guna2Button btnKategoriAlat;

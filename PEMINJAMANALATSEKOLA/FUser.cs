@@ -129,14 +129,17 @@ namespace PEMINJAMANALATSEKOLA
 
             if (Kolom == 6)
             {
-                string id = guna2DataGridView1.Rows[Baris].Cells[0].Value.ToString();
-                foreach (DataRow row in DB.ds.Tables[0].Rows)
+                string id = guna2DataGridView1.Rows[Baris].Cells[0].Value?.ToString();
+                if (string.IsNullOrEmpty(id)) return;
+
+                DialogResult setuju = MessageBox.Show("Apakah Yakin Mau Hapus? " + id, "pemberitahuan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (setuju == DialogResult.Yes)
                 {
-                    DialogResult setuju = MessageBox.Show("Apakah Yakin Mau Hapus? " + id, "pemberitahuan", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (setuju == DialogResult.Yes)
-                    {
-                        DB.crud($"DELETE FROM users WHERE id_user = '{id}'");
-                    }
+                    int rows = DB.execute($"DELETE FROM users WHERE id_user = '{id}'");
+                    if (rows > 0)
+                        MessageBox.Show("Data berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Data tidak ditemukan / gagal dihapus.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     tampildata();
                 }
             }

@@ -53,10 +53,10 @@ namespace PEMINJAMANALATSEKOLA
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            string id = label3.Text;
+            string id = txtID.Text;
             string role = txtRole.Text;
 
-            DB.crud($"UPDATE roles SET role = '{role}' WHERE id_role = '{id}'");
+            DB.crud($"UPDATE roles SET nama_role = '{role}' WHERE id_role = '{id}'");
             bersih();
             tampildata();
         }
@@ -80,7 +80,7 @@ namespace PEMINJAMANALATSEKOLA
                         string role = "" + row["nama_role"];
 
 
-                        label4.Text = idU;
+                        
                         txtID.Text = idU;
                         txtRole.Text = role;
                     }

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace PEMINJAMANALATSEKOLA
 {
+    //FORM PEMINJAMAN
     public partial class FLaporan : Form
     {
         public FLaporan()

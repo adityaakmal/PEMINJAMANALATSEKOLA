@@ -89,6 +89,12 @@
     <Compile Include="Fpengembalian.Designer.cs">
       <DependentUpon>Fpengembalian.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLaporan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLaporan.Designer.cs">
+      <DependentUpon>FLaporan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fpersetujuan.cs">
       <SubType>Form</SubType>
     </Compile>
